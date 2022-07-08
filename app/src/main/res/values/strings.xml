@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Radiation Measurement</string>
+    <string name="action_clear">Clear Records</string>
+    <string name="action_records">Records</string>
+    <string name="no_records">No Records</string>
+
+    <string name="sad">SAD</string>
+    <string name="ssd">SSD</string>
+    <string name="none">None</string>
+
+    <string name="fifteen_degrees">15 degrees</string>
+    <string name="thirty_degrees">30 degrees</string>
+    <string name="forty_five_degrees">45 degrees</string>
+    <string name="sixty_degrees">60 degrees</string>
+
+    <string name="plain">Plain</string>
+    <string name="star_pattern">Star Pattern</string>
+    <string name="slotted_pattern">Slotted Pattern</string>
+    <string name="stripes_pattern">Stripes Pattern</string>
+
+
+
+    <string name="spinner_title_measures">Measures</string>
+    <string name="spinner_title_lead">Lead</string>
+    <string name="spinner_title_wedge">Wedge</string>
+    <string name="selected_item">Selected item:</string>
+    <string name="patient_result">Patient ID:</string>
+    <string name="error_msg">"Please Enter Value"</string>
+    <string name="save_msg">Patient record saved</string>
+
+</resources>

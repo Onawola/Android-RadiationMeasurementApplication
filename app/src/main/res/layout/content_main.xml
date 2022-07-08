@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:layout_marginTop="@dimen/action_bar_default_height"
+    tools:ignore="contentDescription">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/label_tech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Technique"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:prompt="@string/spinner_title_measures"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_tech" />
+
+        <TextView
+            android:id="@+id/label_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jaw/Axis X(cm)"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"/>
+
+        <EditText
+            android:id="@+id/point_a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Input fieldsize X:"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_a" />
+
+        <TextView
+            android:id="@+id/label_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jaw/Axis Y(cm)"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/point_a"/>
+
+        <EditText
+            android:id="@+id/point_b"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Input fieldsize Y:"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_b" />
+
+        <TextView
+            android:id="@+id/label_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depth(cm)"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/point_b"/>
+
+        <EditText
+            android:id="@+id/depth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Input treatment depth:"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_c" />
+
+        <TextView
+            android:id="@+id/label_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dose(Gy)"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/depth"/>
+
+        <EditText
+            android:id="@+id/dose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Input priscribed dose:"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_d" />
+
+        <TextView
+            android:id="@+id/label_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fraction(#)"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/dose"/>
+
+        <EditText
+            android:id="@+id/fraction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="How many fractions:"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_e" />
+
+        <TextView
+            android:id="@+id/label_wedge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wedge"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/fraction"/>
+
+        <Spinner
+            android:id="@+id/spinner_wedge_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/spinner_title_wedge"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_wedge" />
+
+        <TextView
+            android:id="@+id/label_lead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tray Pattern"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_wedge_value"/>
+
+        <Spinner
+            android:id="@+id/spinner_lead_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/spinner_title_lead"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_lead" />
+
+        <TextView
+            android:id="@+id/label_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dose Rate(cGy/min) [Field size 10X10]"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_lead_value"/>
+
+        <EditText
+            android:id="@+id/dose_rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Input Dose Rate:"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_f" />
+
+        <TextView
+            android:id="@+id/label_g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient ID"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/dose_rate"/>
+
+        <EditText
+            android:id="@+id/patient_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_g" />
+
+        <TextView
+            android:id="@+id/label_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serial No."
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/patient_id"/>
+
+        <EditText
+            android:id="@+id/serial_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/label_h" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toStartOf="@+id/btn_save"
+            app:layout_constraintTop_toBottomOf="@+id/serial_no" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/serial_no" />
+
+        <TextView
+            android:id="@+id/hello_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_submit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

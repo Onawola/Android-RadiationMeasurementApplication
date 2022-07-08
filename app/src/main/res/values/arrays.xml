@@ -1,0 +1,22 @@
+<resources>
+    <string-array name="measures">
+        <item>@string/sad</item>
+        <item>@string/ssd</item>
+    </string-array>
+
+    <string-array name="lead">
+        <item>@string/none</item>
+        <item>@string/plain</item>
+        <item>@string/star_pattern</item>
+        <item>@string/slotted_pattern</item>
+        <item>@string/stripes_pattern</item>
+    </string-array>
+
+    <string-array name="wedge">
+        <item>@string/none</item>
+        <item>@string/fifteen_degrees</item>
+        <item>@string/thirty_degrees</item>
+        <item>@string/forty_five_degrees</item>
+        <item>@string/sixty_degrees</item>
+    </string-array>
+</resources>
